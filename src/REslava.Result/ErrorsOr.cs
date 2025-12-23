@@ -9,7 +9,7 @@ public readonly partial record struct ErrorsOr<TValue> : IErrorsOr<TValue>
     
     public ErrorsOr ()
     {
-        throw new InvalidOperationException ("Default construction of ErrorsOr<TValue> is invalid. Please use provided factory methods to instantiate.");
+        throw new InvalidOperationException ("Use Factory instead of default constructor of ErrorsOr<TValue>.");
     }
     private ErrorsOr (Error error)
     {
@@ -54,10 +54,22 @@ public readonly partial record struct ErrorsOr<TValue> : IErrorsOr<TValue>
         {
             if (IsError)
             {
-                throw new InvalidOperationException ("The Value property cannot be accessed when errors have been recorded. Check IsError before accessing Value.");
+                throw new InvalidOperationException ("The Value property is invalid because erros has ocurred. _" +
+                    "Check IsError before.");
             }
 
             return _value;
         }
-    }    
+    }
+
+    public Error FirstError 
+    {
+        get
+        {
+            if (!IsError)
+                throw new InvalidOperationException ("No errors found. Check IsError before.");
+
+            return Error.NoErrors();
+        }
+    }
 }

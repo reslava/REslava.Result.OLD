@@ -1,8 +1,8 @@
-># ErrorsOr
+># REslava.Result
 
 > 🚧 **Under Construction** - This library is currently in active development
 
-A robust C# .NET library implementing the Result pattern for elegant error handling without exceptions.
+A simple, clean and robust C# .NET library implementing the Result pattern for elegant error handling without exceptions.
 
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
@@ -13,9 +13,15 @@ A robust C# .NET library implementing the Result pattern for elegant error handl
 - [Overview](#-overview)
 - [License](#-license)
 
+## 📕 References
+- [Series: Working with the result pattern](https://andrewlock.net/series/working-with-the-result-pattern/)
+- [ErrorOr](https://github.com/amantinband/error-or)
+- [The Result Pattern in C#: A Smarter Way to Handle Errors](https://medium.com/@aseem2372005/the-result-pattern-in-c-a-smarter-way-to-handle-errors-c6dee28a0ef0)
+- [Functional Error Handling in .NET With the Result Pattern](https://www.milanjovanovic.tech/blog/functional-error-handling-in-dotnet-with-the-result-pattern)
+
 ## 🎯 Overview
 
-**ErrorsOr** provides a functional approach to error handling in C# by implementing the Result pattern. Instead of throwing exceptions for expected error cases, this library allows you to return rich error information alongside your data, making your code more predictable and easier to reason about.
+**REslava.Result** provides a functional approach to error handling in C# by implementing the Result pattern. Instead of throwing exceptions for expected error cases, this library allows you to return rich error information alongside your data, making your code more predictable and easier to reason about.
 
 ---
 

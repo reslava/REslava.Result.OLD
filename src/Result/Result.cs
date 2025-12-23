@@ -2,7 +2,7 @@
 
 namespace Result;
 
-public readonly partial record struct Result<TValue> : IErrorsOr<TValue>
+public readonly partial record struct Result<TValue> : IResult<TValue>
 {
     private readonly TValue? _value = default;
     private readonly List<Error>? _errors = null;    

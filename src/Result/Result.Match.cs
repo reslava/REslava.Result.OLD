@@ -1,6 +1,6 @@
 ﻿namespace Result;
 
-public readonly partial record struct Result<TValue> : IErrorsOr<TValue>
+public readonly partial record struct Result<TValue> : IResult<TValue>
 {    
     public TNextValue Match<TNextValue> (Func<TValue, TNextValue> onValue, Func<List<Error>, TNextValue> onError)
     {

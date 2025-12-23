@@ -1,6 +1,6 @@
 ﻿namespace Result;
 
-public readonly partial record struct Result<TValue> : IErrorsOr<TValue>
+public readonly partial record struct Result<TValue> : IResult<TValue>
 {
     public static implicit operator Result<TValue> (TValue value)
     {

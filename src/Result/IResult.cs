@@ -1,13 +1,13 @@
 ﻿namespace Result;
 
-public interface IErrorsOr
+public interface IResult
 {
     List<Error>? Errors { get; }
 
     bool IsError { get; }
 }
 
-public interface IErrorsOr<out TValue> : IErrorsOr
+public interface IResult<out TValue> : IResult
 {
     TValue Value { get; }
 }

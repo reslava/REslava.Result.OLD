@@ -11,7 +11,7 @@ public readonly partial record struct ErrorsOr<TValue> : IErrorsOr<TValue>
     {
         throw new InvalidOperationException ("Default construction of ErrorsOr<TValue> is invalid. Please use provided factory methods to instantiate.");
     }
-    public ErrorsOr (Error error)
+    private ErrorsOr (Error error)
     {
         _errors = [error];
     }
@@ -31,7 +31,7 @@ public readonly partial record struct ErrorsOr<TValue> : IErrorsOr<TValue>
         _errors = errors;
     }
 
-    public ErrorsOr (TValue value)
+    private ErrorsOr (TValue value)
     {
         if (value is null)
         {

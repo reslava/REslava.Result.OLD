@@ -17,7 +17,11 @@ A very simple, clean, and robust C# .NET library that implements the Result patt
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [License](#-license)
+- [Reference](#-refence)
+
+## 🎯 Overview
+
+**REslava.Result** provides a functional approach to error handling in C# by implementing the Result pattern. Instead of throwing exceptions for expected error cases, this library allows you to return rich error information alongside your data, making your code more predictable and easier to reason about.
 
 ## 📕 References
 - [Series: Working with the result pattern](https://andrewlock.net/series/working-with-the-result-pattern/)
@@ -26,10 +30,6 @@ A very simple, clean, and robust C# .NET library that implements the Result patt
 - [ErrorOr](https://github.com/amantinband/error-or)
 - [OneOf](https://github.com/mcintyre321/OneOf)
 - [FluentResults](https://github.com/altmann/FluentResults)
-
-## 🎯 Overview
-
-**REslava.Result** provides a functional approach to error handling in C# by implementing the Result pattern. Instead of throwing exceptions for expected error cases, this library allows you to return rich error information alongside your data, making your code more predictable and easier to reason about.
 
 ---
 

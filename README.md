@@ -15,9 +15,11 @@ A simple, clean and robust C# .NET library implementing the Result pattern for e
 
 ## 📕 References
 - [Series: Working with the result pattern](https://andrewlock.net/series/working-with-the-result-pattern/)
-- [ErrorOr](https://github.com/amantinband/error-or)
 - [The Result Pattern in C#: A Smarter Way to Handle Errors](https://medium.com/@aseem2372005/the-result-pattern-in-c-a-smarter-way-to-handle-errors-c6dee28a0ef0)
 - [Functional Error Handling in .NET With the Result Pattern](https://www.milanjovanovic.tech/blog/functional-error-handling-in-dotnet-with-the-result-pattern)
+- [ErrorOr](https://github.com/amantinband/error-or)
+- [OneOf](https://github.com/mcintyre321/OneOf)
+- [FluentResults](https://github.com/altmann/FluentResults)
 
 ## 🎯 Overview
 

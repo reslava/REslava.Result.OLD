@@ -18,28 +18,21 @@ public readonly partial record struct Result<TValue> : IResult<TValue>
 
     private Result (List<Error> errors)
     {
-        if (errors is null)
-        {
-            throw new ArgumentNullException (nameof (errors));
-        }
-
-        if (errors is null || errors.Count == 0)
-        {
-            throw new ArgumentException ("Cannot create an ErrorOr<TValue> from an empty collection of errors. Provide at least one error.", nameof (errors));
-        }
+        ArgumentNullException.ThrowIfNull (errors);
+        
+        if (errors.Count == 0)        
+            throw new ArgumentException ("Cannot create an ErrorOr<TValue> from an empty collection of errors. Provide at least one error.", nameof (errors));        
 
         _errors = errors;
     }
 
     private Result (TValue value)
     {
-        if (value is null)
-        {
-            throw new ArgumentNullException (nameof (value));
-        }
-
+        ArgumentNullException.ThrowIfNull(value);
+        
         _value = value;
     }
+
     [MemberNotNullWhen (true, nameof (_errors))]
     [MemberNotNullWhen (true, nameof (Errors))]
     [MemberNotNullWhen (false, nameof (Value))]

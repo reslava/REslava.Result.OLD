@@ -1,7 +1,7 @@
-﻿namespace REslava.Result;
+﻿namespace REslava.Result.OLD;
 
 // Error types
-public enum ErrorType
+public enum ErrorTypeEnum
 {    
     Failure = 0,
     Validation = 1,

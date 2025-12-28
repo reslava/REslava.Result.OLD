@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/ConsoleTests/ConsoleTests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/REslava.Result.OLD.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/REslava.Result.Tests/REslava.Result.Tests.csproj" />
+  </Folder>
+</Solution>

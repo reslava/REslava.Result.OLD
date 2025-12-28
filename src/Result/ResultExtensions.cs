@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace REslava.Result;
+namespace REslava.Result.OLD;
 
 public static class ResultExtensions
 {

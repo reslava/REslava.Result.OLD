@@ -1,4 +1,4 @@
-﻿namespace REslava.Result;
+﻿namespace REslava.Result.OLD;
 using System.Diagnostics.CodeAnalysis;
 
 public class Result
@@ -6,9 +6,9 @@ public class Result
     public bool IsSuccess { get; }
     public bool IsFailure => !IsSuccess;
     public List<Error> Errors = [Error.None];
-    public SuccessType SuccessType { get; } = SuccessType.Success;
+    public SuccessTypeEnum SuccessType { get; } = SuccessTypeEnum.Success;
 
-    internal Result (bool isSuccess, Error error, SuccessType successType = SuccessType.Success)
+    internal Result (bool isSuccess, Error error, SuccessTypeEnum successType = SuccessTypeEnum.Success)
     {
         if (isSuccess && error != Error.None ||
             !isSuccess && error == Error.None)
@@ -38,13 +38,13 @@ public class Result
     public Error Error => Errors[0];
 
     public static Result Success () => new (true, Error.None);
-    public static Result Success (SuccessType successType) => new (true, Error.None, successType);
+    public static Result Success (SuccessTypeEnum successType) => new (true, Error.None, successType);
 
     public static Result Failure (Error error) => new (false, error);
 
     public static Result<TValue> Success<TValue> (TValue value) =>
         new (value, true, Error.None);
-    public static Result<TValue> Success<TValue> (TValue value, SuccessType successType) =>
+    public static Result<TValue> Success<TValue> (TValue value, SuccessTypeEnum successType) =>
         new (value, true, Error.None, successType);
 
     public static Result<TValue> Failure<TValue> (Error error) =>
@@ -55,13 +55,13 @@ public class Result<TValue> : Result
 {
     private readonly TValue? _value;
 
-    internal Result (TValue? value, bool isSuccess, Error error, SuccessType successType = SuccessType.Success)
+    internal Result (TValue? value, bool isSuccess, Error error, SuccessTypeEnum successType = SuccessTypeEnum.Success)
         : base (isSuccess, error, successType)
     {
         _value = value;
     }
 
-    internal Result (TValue? value, bool isSuccess, List<Error> errors, SuccessType successType = SuccessType.Success)
+    internal Result (TValue? value, bool isSuccess, List<Error> errors, SuccessTypeEnum successType = SuccessTypeEnum.Success)
         : base (isSuccess, errors)
     {
         _value = value;

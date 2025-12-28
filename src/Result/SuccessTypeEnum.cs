@@ -1,7 +1,7 @@
-﻿namespace REslava.Result;
+﻿namespace REslava.Result.OLD;
 
 // Success types
-public enum SuccessType
+public enum SuccessTypeEnum
 {
     Success = 0, 
     Created = 1, 
